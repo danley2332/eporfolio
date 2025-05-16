@@ -1,4 +1,4 @@
-function Projects() {
+function Portfolio() {
     return(
 
 
@@ -17,6 +17,4 @@ function Projects() {
 
 
 
-
-
-export default Projects;
+export default Portfolio;

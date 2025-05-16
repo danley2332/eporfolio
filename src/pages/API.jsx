@@ -1,4 +1,9 @@
-function Projects() {
+
+
+
+
+
+function API() {
     return(
 
 
@@ -16,7 +21,4 @@ function Projects() {
 
 
 
-
-
-
-export default Projects;
+export default API;
