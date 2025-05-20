@@ -1,0 +1,36 @@
+.Home{
+background: rgb(255, 255, 255);
+min-height: 100vh;
+overflow-x: hidden;
+}
+#Titre{
+    position: absolute;
+    font-size: 5em;
+    color: #ffffff;
+    top: 50.9%;
+    left: 25%;
+    text-shadow: 2px 2px 4px #0002;
+    font-family: 'Poppins', sans-serif;
+}
+#Intro {
+  position: relative;
+  background: #003329;
+  padding: 500px;
+  margin-top: 100vh;
+  width: 50%;
+}
+.hill1,
+.hill2,
+.hill3,
+.hill4,
+.hill5,
+.leaf,
+.plant,
+.tree {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  object-fit: cover;
+}
