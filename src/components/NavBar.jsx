@@ -5,7 +5,7 @@ function NavBar() {
         <Link to="/">Home</Link>
         <Link to="/Projects">Projects</Link>
         <Link to="/api">API</Link>
-        <Link to="/Portfoio">Portfolio</Link>
+        <Link to="/Portfolio">Portfolio</Link>  
      </nav>
     );
 }

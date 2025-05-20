@@ -21,10 +21,7 @@ function App() {
         <Route path="/API" element={<API/>} />
         <Route path="/Portfolio" element={<Portfolio/>} />
      </Routes>
-     
-     
-     
-      
+     <Footer />
      
     </>
   )

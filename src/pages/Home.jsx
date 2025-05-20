@@ -52,7 +52,7 @@ function Home() {
     
      
 
-        <div class="Home">
+        <div className="Home">
          
             <img className="hill1" src={hill1} ref={hill1Ref} />
             <img className="hill2" src={hill2} />
@@ -69,13 +69,13 @@ function Home() {
          <p id="Intro">
          Dans ma deuxième session au cégep Marie-Victorin, dans le programme de Techniques de l’informatique, j’ai été appelé à créer un site web complet dans le cadre de l’épreuve finale du cours <strong>Application Web</strong>. 
          Ce site, sur lequel vous vous trouvez en ce moment, a été conçu pour démontrer mes compétences en React, en structuration de projet, en intégration d’API, et en conception d’interfaces dynamiques et interactives. 
-         Il contient <strong>quatre grandes parties principales</strong> : 
-         Accueil – une page d’entrée visuellement attrayante qui introduit mon site et mon identité ; 
-         Projets – une section qui présente plusieurs projets informatiques que j’ai réalisés, accompagnés de descriptions, technologies utilisées et captures ; 
-         API – une page connectée à une API externe qui montre ma capacité à afficher dynamiquement des données ; 
-         Portfolio – une vitrine personnelle où je me présente, partage mon parcours, mes intérêts et mes objectifs professionnels. 
+         Il contient <strong>quatre grandes parties principales</strong> : <br /> <br />
+         Accueil – une page d’entrée visuellement attrayante qui introduit mon site et mon identité.<br /> <br /> 
+         Projets – une section qui présente plusieurs projets informatiques que j’ai réalisés, accompagnés de descriptions, technologies utilisées et captures. <br /> <br />
+         API – une page connectée à une API externe qui montre ma capacité à afficher dynamiquement des données. <br /> <br />
+         Portfolio – une vitrine personnelle où je me présente, partage mon parcours, mes intérêts et mes objectifs professionnels.<br /> <br /> 
          Ce travail  reflète non seulement mes apprentissages techniques, mais aussi ma progression dans le développement web. 
-         <strong>Sur ce, je vous souhaite une bonne visite de mon site web, et j’espère que vous aurez aimé apprendre à mieux me connaître.</strong>
+         <strong><br /> <br />Sur ce, je vous souhaite une bonne visite de mon site web, et j’espère que vous aurez aimé apprendre à mieux me connaître!<br /> :) <br /> <br /> <br /> <br /></strong> 
          </p>
          
         
