@@ -7,6 +7,11 @@ import hill5 from '../assets/hill5.png';
 import leaf from '../assets/leaf.png';
 import plant from '../assets/plant.png';
 import tree from '../assets/tree.png';
+import grad from '../assets/grad.png';
+import tcdo1 from '../assets/tcdo1.png';
+import cj from '../assets/cj.png';
+import travis from  '../assets/travis.png';
+import ftmh from '../assets/ftmh.png';
 import { useEffect, useRef } from 'react';
 
 function Portfolio() {
@@ -36,7 +41,7 @@ function Portfolio() {
     }, []);
 
     return (
-        <div class  ="Portfolio">
+        <div className="Portfolio">
             <img className="hill1" src={hill1} ref={hill1Ref} />
             <img className="hill2" src={hill2} />
             <img className="hill3" src={hill3} />
@@ -45,12 +50,19 @@ function Portfolio() {
             <img className="tree" src={tree} />
 
             <h2 id="Titre" ref={textRef}>PORTFOLIO</h2>
+            
 
             <h3 id="Intro">
+                <img className="cj" src={cj} alt="Cactus Jack" />
+                <img className="tcdo" src={tcdo1} alt="tcdo" />
+                <img className="trav" src={travis} alt="trav" />
+                <img className="ftmh1" src={ftmh} alt="ftmh1" />
+                <img className="photo-profil" src={grad} alt="Danley Philippe en graduation" />
+                <h4 id="Nom">Danley<br /> Philippe<br /><br /></h4>
                 Je suis une personne serviable, généreuse et sociable. Mon intelligence m’aide à relever les défis, 
                 même si mon TDA me freine parfois. <br /><br />
                 J’ai une personnalité vive et créative, et j’aime apprendre de manière dynamique et interactive.<br /><br />
-                Ce qui me passionne : les jeux vidéo, l’entraînement au gym et la musique. <br />
+                Ce qui me passionne : les jeux vidéo, l’entraînement au gym, la musique et ma relation avec Jésus                                                                                                                                   . <br />
                 L’informatique m’attire particulièrement pour son aspect sécurité : la cybersécurité est un domaine 
                 que je rêve d’explorer plus en profondeur. <br /><br />
                 
@@ -62,7 +74,7 @@ function Portfolio() {
                 <strong>Techniques de l’informatique</strong>. Je suis actuellement en deuxième session de ce programme. <br /><br />
                 Je n’ai pas encore eu l’occasion de faire un stage ou un emploi lié directement à l’informatique, 
                 mais mon intérêt pour ce domaine est très présent. <br /><br />
-                J’ai participé à un projet scolaire marquant au secondaire, où j’ai programmé des robots en LEGO 
+                J’ai participé à un projet scolaire, où j’ai programmé des robots en LEGO 
                 lors d’une activité de création en équipe en secondaire 3. <br />
                 De plus, j’ai déjà offert de mon temps dans des activités parascolaires à titre bénévole. <br /><br />
                 Mon parcours est encore jeune, mais il est animé par une grande curiosité et une volonté 

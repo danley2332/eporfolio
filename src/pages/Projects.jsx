@@ -44,7 +44,7 @@ function Projects() {
             <img className="hill5" src={hill5} ref={hill5Ref} />
             <img className="tree" src={tree} />
 
-            <h2 id="Titre" ref={textRef}>PROJETS</h2>
+            <h2 id="Titre" ref={textRef}>PROJECTS</h2>
 
             <p id="Intro">
                 Voici la section qui présente mes projets réalisés durant ma formation. Chaque projet est le reflet d’une compétence acquise et d’un défi relevé. <br /><br />
