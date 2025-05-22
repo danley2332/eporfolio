@@ -68,18 +68,33 @@ function Portfolio() {
                 
   
             </h3>
+            <ul id="Pro">
+                <li>
+                    J’étudie présentement au <strong>cégep Marie-Victorin</strong>, dans le programme de 
+                    <strong>Techniques de l’informatique</strong>. Je suis actuellement en deuxième session de ce programme.
+                </li>
+                <br />
+                <li>
+                    Je n’ai pas encore eu l’occasion de faire un stage ou un emploi lié directement à l’informatique, 
+                    mais mon intérêt pour ce domaine est très présent.
+                </li>
+                <br />
+                <li>
+                    J’ai participé à un projet scolaire, où j’ai programmé des robots en LEGO 
+                    lors d’une activité de création en équipe en secondaire 3.
+                </li>
+                <br />
+                <li>
+                    J’ai déjà offert de mon temps dans des activités parascolaires à titre bénévole.
+                </li>
+                <br />
+                <li>
+                    Mon parcours est encore jeune, mais il est animé par une grande curiosité et une volonté 
+                    de progresser chaque jour.
+                </li>
+                <br />
+            </ul>
 
-            <p id="Pro">
-                J’étudie présentement au <strong>cégep Marie-Victorin</strong>, dans le programme de 
-                <strong>Techniques de l’informatique</strong>. Je suis actuellement en deuxième session de ce programme. <br /><br />
-                Je n’ai pas encore eu l’occasion de faire un stage ou un emploi lié directement à l’informatique, 
-                mais mon intérêt pour ce domaine est très présent. <br /><br />
-                J’ai participé à un projet scolaire, où j’ai programmé des robots en LEGO 
-                lors d’une activité de création en équipe en secondaire 3. <br />
-                De plus, j’ai déjà offert de mon temps dans des activités parascolaires à titre bénévole. <br /><br />
-                Mon parcours est encore jeune, mais il est animé par une grande curiosité et une volonté 
-                de progresser chaque jour. <br /> <br />
-            </p>
 
             <img className="leaf" src={leaf} ref={leafRef} />
             <img className="plant" src={plant} />
