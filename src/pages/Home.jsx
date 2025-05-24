@@ -10,6 +10,7 @@ import tree from '../assets/tree.png';
 import { useEffect, useRef } from 'react';
 
 function Home() {
+    // Ce code a été créé grace a un tutoriel de Youtube : https://youtu.be/alGnk3iMaYE?si=-8wFNNFb8V8ybLoC
 
     const textRef = useRef(null);
     const leafRef = useRef(null);

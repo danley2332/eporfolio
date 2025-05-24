@@ -15,6 +15,7 @@ import ftmh from '../assets/ftmh.png';
 import { useEffect, useRef } from 'react';
 
 function Portfolio() {
+    // Ce code a été créé grace a un tutoriel de Youtube : https://youtu.be/alGnk3iMaYE?si=-8wFNNFb8V8ybLoC
     const textRef = useRef(null);
     const leafRef = useRef(null);
     const hill1Ref = useRef(null);
