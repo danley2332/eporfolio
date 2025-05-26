@@ -8,7 +8,6 @@ import leaf from '../assets/leaf.png';
 import plant from '../assets/plant.png';
 import tree from '../assets/tree.png';
 import { useEffect, useRef, useState} from 'react';
-
 function Projects() {
     // Ce code a été créé grace a un tutoriel de Youtube : https://youtu.be/alGnk3iMaYE?si=-8wFNNFb8V8ybLoC
     const textRef = useRef(null);
@@ -48,7 +47,6 @@ function Projects() {
     const resetProjects = () => {
         localStorage.removeItem("projets");
     };
-
     useEffect(() => {
         const handleScroll = () => {
             let value = window.scrollY;
@@ -63,11 +61,9 @@ function Projects() {
             if (hill4Ref.current) hill4Ref.current.style.left = value * -1.5 + 'px';
             if (hill1Ref.current) hill1Ref.current.style.top = value * 1.5 + 'px';
         };
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
     return (
         <div className="Projects">
             <img className="hill1" src={hill1} ref={hill1Ref} />
@@ -86,7 +82,6 @@ function Projects() {
             </p>
             <>
                 <h1 id="FormTitle" className="FormTitle">Formulaire</h1>
-
                 <form onSubmit={handleSubmit} className="space-y-4">
                  <label>Titre du projet :</label>
                     <input
@@ -143,5 +138,4 @@ function Projects() {
         </div>
     );
 }
-
 export default Projects;

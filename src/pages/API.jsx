@@ -9,7 +9,6 @@ import plant from '../assets/plant.png';
 import tree from '../assets/tree.png';
 import { useEffect, useRef, useState } from 'react';
 import amibo from '../assets/amibo.png';
-
 function API() {
   // Ce code a été créé grace a un tutoriel de Youtube : https://youtu.be/alGnk3iMaYE?si=-8wFNNFb8V8ybLoC
   const textRef = useRef(null);
@@ -20,12 +19,10 @@ function API() {
   const [amiibos, setAmiibos] = useState([]);
   const [index, setIndex] = useState(0);
   const [search, setSearch] = useState('');
-
   useEffect(() => {
     const handleScroll = () => {
       let value = window.scrollY;
       if (value > 500) value = 500;
-
       if (textRef.current) textRef.current.style.marginTop = value * 2.5 + 'px';
       if (leafRef.current) {
         leafRef.current.style.top = value * -1.5 + 'px';
@@ -35,7 +32,6 @@ function API() {
       if (hill4Ref.current) hill4Ref.current.style.left = value * -1.5 + 'px';
       if (hill1Ref.current) hill1Ref.current.style.top = value * 1.5 + 'px';
     };
-
     fetch('https://www.amiiboapi.com/api/amiibo/')
       .then(res => res.json())
       .then(data => {
@@ -45,17 +41,14 @@ function API() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const handleNext = () => {
     setIndex((prevIndex) => (prevIndex + 1) % amiibos.length);
   };
-
   const handlePrev = () => {
     setIndex((prevIndex) =>
       prevIndex === 0 ? amiibos.length - 1 : prevIndex - 1
     );
   };
-
   const handleSearch = (e) => {
     e.preventDefault();
     fetch(`https://www.amiiboapi.com/api/amiibo/?character=${search}`)
@@ -65,9 +58,7 @@ function API() {
         setIndex(0);
       });
   };
-
   const current = amiibos[index];
-
   return (
     <div className="API">
       <img className="hill1" src={hill1} ref={hill1Ref} />
@@ -78,16 +69,12 @@ function API() {
       <img className="tree" src={tree} />
 
       <h2 id="Titre" ref={textRef}>API</h2>
-
       <p id="Intro">
         Cette page est dédiée à ma passion pour l’univers des jeux vidéos. Grâce à une API publique, elle permet de parcourir différentes figurines Amiibo. <br /> <br /> Tu peux explorer les personnages disponibles, <br /> <br /> découvrir leurs détails, <br /> <br /> et faire des recherches ciblées par nom.  <br /> <br /> 
       </p>
-
       <div className="api-page">        
         <h1 className="api-title">Figurines</h1>
         <img className="amiibo" src={amibo} alt="amiibo" />
-
-
         <form onSubmit={handleSearch} className="search-form">
           <input
             type="text"
@@ -97,7 +84,6 @@ function API() {
           />
           <button type="submit">Rechercher</button>
         </form>
-
         {current && (
           <div className="amiibo-card">
             <img src={current.image} alt={current.name} />
@@ -108,17 +94,14 @@ function API() {
             <p><strong>Sortie NA :</strong> {current.release?.na || 'Non disponible'}</p>
           </div>
         )}
-
         <div className="nav-buttons">
           <button onClick={handlePrev}>Précédent</button>
           <button onClick={handleNext}>Suivant</button>
         </div>
       </div>
-
       <img className="leaf" src={leaf} ref={leafRef} />
       <img className="plant" src={plant} />
     </div>
   );
 }
-
 export default API;

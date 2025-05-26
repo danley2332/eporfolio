@@ -8,10 +8,6 @@ import Home from './pages/Home.jsx'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import { useState } from 'react';
-
-
-
-
 function App() {
   const [newProject, setNewProject] = useState({})
   const addNewProject = (project) => {
@@ -32,5 +28,4 @@ function App() {
     </>
   )
 }
-
 export default App

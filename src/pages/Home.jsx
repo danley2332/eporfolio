@@ -8,16 +8,13 @@ import leaf from '../assets/leaf.png';
 import plant from '../assets/plant.png';
 import tree from '../assets/tree.png';
 import { useEffect, useRef } from 'react';
-
 function Home() {
     // Ce code a été créé grace a un tutoriel de Youtube : https://youtu.be/alGnk3iMaYE?si=-8wFNNFb8V8ybLoC
-
     const textRef = useRef(null);
     const leafRef = useRef(null);
     const hill1Ref = useRef(null);
     const hill4Ref = useRef(null);
     const hill5Ref = useRef(null);
-
     useEffect(() => {
         const handleScroll = () => {
         let value = window.scrollY;
@@ -41,30 +38,17 @@ function Home() {
         hill1Ref.current.style.top = value * 1.5 + 'px';
       }
     };
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-
-
     return(
-
-    
-     
-
         <div className="Home">
-         
             <img className="hill1" src={hill1} ref={hill1Ref} />
             <img className="hill2" src={hill2} />
             <img className="hill3" src={hill3} />
             <img className="hill4" src={hill4} ref={hill4Ref} />
             <img className="hill5" src={hill5} ref={hill5Ref} />
             <img className="tree" src={tree} />
-
-
-
-      
          <h2 id="Titre" ref={textRef}>WELCOME TO MY WEBSITE</h2>
          
          <p id="Intro">
@@ -78,25 +62,9 @@ function Home() {
          Ce travail  reflète non seulement mes apprentissages techniques, mais aussi ma progression dans le développement web. 
          <strong><br /> <br />Sur ce, je vous souhaite une bonne visite de mon site web, et j’espère que vous aurez aimé apprendre à mieux me connaître!<br /> :) <br /> <br /> <br /> <br /></strong> 
          </p>
-         
-        
-
          <img className='leaf' src={leaf} ref={leafRef} />
          <img className='plant' src={plant} />
-        
         </div>
-
     );
-
-
-
-
 }
-
-
-
-
-
-
-
 export default Home;
