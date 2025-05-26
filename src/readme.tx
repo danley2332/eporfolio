@@ -1,0 +1,81 @@
+Jour 1 – Initialisation du projet
+- Création du projet avec `npm create vite@latest`.
+- Installation de React, React Router et autres dépendances.
+- Configuration de la structure de base (`pages/`, `assets/`, `App.jsx`).
+
+Jour 2 – Mise en place du routage
+- Mise en place de React Router avec `BrowserRouter`, `Routes`, `Route`.
+- Ajout des pages vierges : `Home.jsx`, `Portfolio.jsx`, `Projects.jsx`, `API.jsx`.
+
+Jour 3 – Intégration visuelle de la page d'accueil
+- Ajout des images dans `assets/`.
+- Animation parallaxe avec `useRef()` sur les éléments visuels.
+- Affichage du titre principal centré avec style.
+
+Jour 4 – Création du contenu de la page Home
+- Ajout du texte de présentation.
+- Réglage des marges et positionnement des éléments avec CSS.
+- Test de l’effet parallaxe au scroll.
+
+Jour 5 – Début du contenu de Portfolio
+- Ajout des images personnelles : graduation, logos, passions.
+- Création d’une section de présentation personnelle.
+- Intégration du texte décrivant ma personnalité et mes objectifs.
+
+Jour 6 – Parcours scolaire dans Portfolio
+- Transformation du texte en liste organisée.
+- Ajout de balises `<li>` pour chaque élément du parcours.
+- Nettoyage visuel et mise en forme responsive.
+
+Jour 7 – Début de la page Projects
+- Ajout d’une introduction expliquant le but de la section.
+- Création d’un tableau statique de projets (2 projets).
+- Utilisation de `.map()` pour affichage dynamique.
+
+Jour 8 – Création du formulaire d’ajout de projet
+- Mise en place des champs (titre, description, image, lien, etc.).
+- Utilisation de `useState` pour contrôler les inputs.
+- Ajout de `handleChange` et `handleSubmit`.
+
+Jour 9 – Sauvegarde des projets avec localStorage
+- Utilisation de `localStorage` pour conserver les projets.
+- Récupération dans `Portfolio` et affichage automatique.
+- Test complet du cycle : ajouter → sauvegarder → afficher.
+
+Jour 10 – Intégration de l’API Amiibo
+- Recherche et choix de l’API : https://www.amiiboapi.com
+- Première requête `fetch()` dans `useEffect()`.
+- Stockage des données Amiibo dans un `useState`.
+
+Jour 11 – Navigation entre les éléments de l’API
+- Ajout des boutons “Précédent / Suivant”.
+- Affichage conditionnel des données (nom, image, série).
+- Rendu responsive et stylisé avec CSS.
+
+Jour 12 – Fonction de recherche Amiibo
+- Ajout d’un formulaire de recherche avec champ texte.
+- Requête API basée sur le nom (`character`).
+- Réinitialisation de l’index après chaque recherche.
+
+Jour 13 – Stylisation de la page API
+- Ajout d’un logo Amiibo local avec `import amiibo from '../assets/amiibo.png'`.
+- Ajustement des marges, boutons, inputs.
+- Revue du design général de toutes les sections.
+
+Jour 14 – Nettoyage du code et vérifications
+- Vérification de la logique dans chaque `useEffect`, `useState`, `map()`.
+- Suppression du code mort et des imports inutiles.
+- Test de toutes les pages et navigation.
+
+Jour 15 – Derniers ajustements (ce soir)
+- Test final complet : formulaire, API, affichage.
+- Relecture du contenu texte et des titres.
+- Préparation du `README.md` et mise au propre du dépôt GitHub.
+
+---
+Résumé technique
+- Projet créé avec **React** via **Vite**
+- Utilisation de `useState`, `useEffect`, `useRef`
+- Pages séparées dans `pages/`, assets bien organisés
+- Intégration dynamique de données API
+- Composants clairs, code propre, formulaire fonctionnel

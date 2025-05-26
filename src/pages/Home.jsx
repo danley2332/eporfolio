@@ -72,9 +72,9 @@ function Home() {
          Ce site, sur lequel vous vous trouvez en ce moment, a été conçu pour démontrer mes compétences en React, en structuration de projet, en intégration d’API, et en conception d’interfaces dynamiques et interactives. 
          Il contient <strong>quatre grandes parties principales</strong> : <br /> <br />
          Accueil – une page d’entrée visuellement attrayante qui introduit mon site et mon identité.<br /> <br /> 
-         Projets – une section qui présente plusieurs projets informatiques que j’ai réalisés, accompagnés de descriptions, technologies utilisées et captures. <br /> <br />
-         API – une page connectée à une API externe qui montre ma capacité à afficher dynamiquement des données. <br /> <br />
-         Portfolio – une vitrine personnelle où je me présente, partage mon parcours, mes intérêts et mes objectifs professionnels.<br /> <br /> 
+         Projets – une section qui  propose un formulaire permettant d’ajouter des projets informatiques avec titre, description, image, technologies et liens. Les projets ajoutés sont sauvegardés pour être affichés dans le portfolio. <br /> <br />
+         API –Cette page affiche dynamiquement un Amiibo aléatoire provenant d’une API externe. Elle représente l’un de mes intérêts personnels: Les Jeux vidéos.<br /> <br />
+         Portfolio – une vitrine personnelle où je me présente, partage mon parcours, mes intérêts et mes objectifs professionnels.Elle affiche aussi automatiquement mes projets ajoutés dans la partie Projets.<br /> <br /> 
          Ce travail  reflète non seulement mes apprentissages techniques, mais aussi ma progression dans le développement web. 
          <strong><br /> <br />Sur ce, je vous souhaite une bonne visite de mon site web, et j’espère que vous aurez aimé apprendre à mieux me connaître!<br /> :) <br /> <br /> <br /> <br /></strong> 
          </p>

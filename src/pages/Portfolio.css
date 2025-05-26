@@ -6,15 +6,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden; 
 }
-#Titre {
-  position: absolute;
-  font-size: 5em;
-  color: hsl(0, 0%, 100%);
-  top: 50.9%;
-  left: 25%;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.133);
-  font-family: 'Poppins', sans-serif;
-}
 #Nom {
   font-size: 2.5em;
   margin-left: -100%;
@@ -111,3 +102,43 @@ body {
   pointer-events: none;
   object-fit: cover;
 }
+.project-section {
+
+  padding: 40px;
+  background: #003329;
+  text-align: center;
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.project-card {
+  width: 300px;
+  background-color: #115346;
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.project-card a {
+  color: #4dd0a7;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+.section-title{
+  font-size: 2.5em;
+  color: #17aa8d;
+  text-shadow: 2px 2px 4px rgba(17, 167, 24, 0.133);
+}
+

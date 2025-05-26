@@ -7,7 +7,7 @@ import hill5 from '../assets/hill5.png';
 import leaf from '../assets/leaf.png';
 import plant from '../assets/plant.png';
 import tree from '../assets/tree.png';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState} from 'react';
 
 function Projects() {
     // Ce code a été créé grace a un tutoriel de Youtube : https://youtu.be/alGnk3iMaYE?si=-8wFNNFb8V8ybLoC
@@ -16,6 +16,38 @@ function Projects() {
     const hill1Ref = useRef(null);
     const hill4Ref = useRef(null);
     const hill5Ref = useRef(null);
+    const [newProject, setNewProject] = useState({
+        title:"",
+        description:"",
+        image:"",
+        technologies:"",
+        link:"",
+        github:""
+    });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setNewProject((prevProject) => ({
+            ...prevProject,
+            [name]: value,
+        }));
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const projetsExistants = JSON.parse(localStorage.getItem("projets")) || [];
+        const projetsMisAJour = [...projetsExistants, newProject];
+        localStorage.setItem("projets", JSON.stringify(projetsMisAJour));
+        setNewProject({
+            title: "",
+            description: "",
+            image: "",
+            technologies: "",
+            link: "",
+            github: ""
+        });
+    };
+    const resetProjects = () => {
+        localStorage.removeItem("projets");
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -48,12 +80,64 @@ function Projects() {
             <h2 id="Titre" ref={textRef}>PROJECTS</h2>
 
             <p id="Intro">
-                Voici la section qui présente mes projets réalisés durant ma formation. Chaque projet est le reflet d’une compétence acquise et d’un défi relevé. <br /><br />
-                Que ce soit en JavaScript, React, Java ou SQL, j’ai appliqué ce que j’ai appris pour créer des applications fonctionnelles et bien structurées. 
-                Vous y trouverez des descriptions détaillées, les technologies utilisées, des images ou extraits de code. <br /><br />
-                Ce portfolio de projets démontre non seulement mes capacités techniques, mais aussi ma passion pour le développement.
+             Bienvenue sur la page Projects !  <br /><br />
+             Ici, on peut ajouter des propres projets à mon portfolio. Remplis simplement le formulaire avec les informations du projet <br />(titre, description, image, lien, etc.)<br /><br /> Puis clique sur « Ajouter » <br /><br />
+             Une fois le projet ajouté, <br /> il apparaîtra automatiquement dans la section « Projets informatiques » de ma page Portfolio. <br /><br />
             </p>
+            <>
+                <h1 id="FormTitle" className="FormTitle">Formulaire</h1>
 
+                <form onSubmit={handleSubmit} className="space-y-4">
+                 <label>Titre du projet :</label>
+                    <input
+                        type="text" 
+                        name="title" 
+                        value={newProject.title} 
+                        onChange={handleChange} 
+                        required 
+                    />
+                    <label>Description :</label>
+                    <textarea
+                        name="description" 
+                        value={newProject.description} 
+                        onChange={handleChange} 
+                        required 
+                    />
+                    <label>Technologies :</label>
+                    <input
+                        type="text" 
+                        name="technologies" 
+                        value={newProject.technologies} 
+                        onChange={handleChange} 
+                        required 
+                    />
+                    <label>URL de l’image :</label>
+                    <input
+                        type="text" 
+                        name="image" 
+                        value={newProject.image} 
+                        onChange={handleChange} 
+                    />
+                    <label>Lien du projet :</label>
+                    <input
+                        type="text" 
+                        name="link" 
+                        value={newProject.link} 
+                        onChange={handleChange} 
+                    />
+                    <label>Lien GitHub :</label>
+                    <input
+                        type="text" 
+                        name="github" 
+                        value={newProject.github} 
+                        onChange={handleChange} 
+                    />
+                    <button type="submit">Ajouter le projet</button>
+                </form>
+                <button type="button" onClick={resetProjects} className="reset-btn">
+                 Réinitialiser les projets
+                </button>
+            </>
             <img className="leaf" src={leaf} ref={leafRef} />
             <img className="plant" src={plant} />
         </div>

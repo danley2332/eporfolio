@@ -12,8 +12,7 @@ import tcdo1 from '../assets/tcdo1.png';
 import cj from '../assets/cj.png';
 import travis from  '../assets/travis.png';
 import ftmh from '../assets/ftmh.png';
-import { useEffect, useRef } from 'react';
-
+import { useEffect, useRef, useState } from 'react';
 function Portfolio() {
     // Ce code a été créé grace a un tutoriel de Youtube : https://youtu.be/alGnk3iMaYE?si=-8wFNNFb8V8ybLoC
     const textRef = useRef(null);
@@ -21,12 +20,11 @@ function Portfolio() {
     const hill1Ref = useRef(null);
     const hill4Ref = useRef(null);
     const hill5Ref = useRef(null);
-
+    const [projets, setProjets] = useState([]);
     useEffect(() => {
         const handleScroll = () => {
             let value = window.scrollY;
             if (value > 500) value = 500;
-
             if (textRef.current) textRef.current.style.marginTop = value * 2.5 + 'px';
             if (leafRef.current) {
                 leafRef.current.style.top = value * -1.5 + 'px';
@@ -36,11 +34,13 @@ function Portfolio() {
             if (hill4Ref.current) hill4Ref.current.style.left = value * -1.5 + 'px';
             if (hill1Ref.current) hill1Ref.current.style.top = value * 1.5 + 'px';
         };
-
+        const projetsSauvegardes = localStorage.getItem("projets");
+            if (projetsSauvegardes) {
+            setProjets(JSON.parse(projetsSauvegardes));
+        };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
     return (
         <div className="Portfolio">
             <img className="hill1" src={hill1} ref={hill1Ref} />
@@ -49,10 +49,7 @@ function Portfolio() {
             <img className="hill4" src={hill4} ref={hill4Ref} />
             <img className="hill5" src={hill5} ref={hill5Ref} />
             <img className="tree" src={tree} />
-
             <h2 id="Titre" ref={textRef}>PORTFOLIO</h2>
-            
-
             <h3 id="Intro">
                 <img className="cj" src={cj} alt="Cactus Jack" />
                 <img className="tcdo" src={tcdo1} alt="tcdo" />
@@ -66,8 +63,6 @@ function Portfolio() {
                 Ce qui me passionne : les jeux vidéo, l’entraînement au gym, la musique et ma relation avec Jésus                                                                                                                                   . <br />
                 L’informatique m’attire particulièrement pour son aspect sécurité : la cybersécurité est un domaine 
                 que je rêve d’explorer plus en profondeur. <br /><br />
-                
-  
             </h3>
             <ul id="Pro">
                 <li>
@@ -95,12 +90,36 @@ function Portfolio() {
                 </li>
                 <br />
             </ul>
-
-
+            <div className="project-section">
+              <h3 id="section-title" className="section-title">Projets informatiques</h3>
+                <div className="project-list">
+                    {projets.map((projet, index) => (
+                    <div className="project-card" key={index}>
+                        <h4>{projet.title}</h4>
+                        <p>{projet.description}</p>
+                        <p><strong>Technologies :</strong> {projet.technologies}</p>
+                        {projet.image && <img src={projet.image} alt={projet.title} />}
+                        {projet.link && (
+                        <p>
+                            <a href={projet.link} target="_blank" rel="noopener noreferrer">
+                            Voir le projet
+                            </a>
+                        </p>
+                        )}
+                        {projet.github && (
+                        <p>
+                            <a href={projet.github} target="_blank" rel="noopener noreferrer">
+                            Voir sur GitHub
+                            </a>
+                        </p>
+                        )}
+                    </div>
+                    ))}
+                </div>
+            </div>
             <img className="leaf" src={leaf} ref={leafRef} />
             <img className="plant" src={plant} />
         </div>
     );
 }
-
 export default Portfolio;
